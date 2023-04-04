@@ -7,19 +7,16 @@ export default function WordApi(props) {
   let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${props.word}`;
 
   function showDescription(response) {
-    console.log(response);
-    setDescription({
-      word: props.word,
-      definition: response.data[0].meaning[0].definition[0].definition,
-    });
+    setDescription(response.data[0]);
   }
+  console.log(props.word);
   axios.get(apiUrl).then(showDescription);
-  description = "hi";
+
   return (
     <div className="WordApi">
       <div className="Container">
         <h2>{props.word}</h2>
-        <p>{description.definition}</p>
+        <p>{console.log(description)}</p>
       </div>
     </div>
   );

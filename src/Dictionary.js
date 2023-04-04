@@ -3,7 +3,7 @@ import WordApi from "./WordApi";
 import "./Dictionary";
 
 export default function Dictionary() {
-  const [word, setWord] = useState("water");
+  const [words, setWord] = useState("water");
   function saveData(event) {
     event.preventDefault();
   }
@@ -55,7 +55,7 @@ export default function Dictionary() {
             <input type="submit" className="btn btn-info" />
           </form>
         </div>
-        <WordApi word={word} />
+        <WordApi word={words} />
       </div>
     </div>
   );
