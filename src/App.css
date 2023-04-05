@@ -7,7 +7,7 @@ body {
   max-width: 1200px;
   display: block;
 
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .App-link {

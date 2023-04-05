@@ -1,23 +1,29 @@
-import React, { useState } from "react";
-import axios from "axios";
+import React from "react";
 import "./WordApi.css";
+import Use from "./Use";
 
 export default function WordApi(props) {
-  let [description, setDescription] = useState();
-  let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${props.word}`;
-
-  function showDescription(response) {
-    setDescription(response.data[0]);
-  }
-  console.log(props.word);
-  axios.get(apiUrl).then(showDescription);
-
-  return (
-    <div className="WordApi">
-      <div className="Container">
-        <h2>{props.word}</h2>
-        <p>{console.log(description)}</p>
+  console.log(props.data);
+  if (props.data) {
+    return (
+      <div className="WordApi">
+        <div className="Container">
+          <h2>{props.data.word}</h2>
+          <p>
+            {props.data.meanings.map(function (elements, index) {
+              return (
+                <div>
+                  <div key={index}>
+                    <Use elements={elements} />
+                  </div>
+                </div>
+              );
+            })}
+          </p>
+        </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    return null;
+  }
 }

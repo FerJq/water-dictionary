@@ -1,15 +1,27 @@
 import React, { useState } from "react";
 import WordApi from "./WordApi";
+
 import "./Dictionary";
+import axios from "axios";
 
 export default function Dictionary() {
+  let [description, setDescription] = useState(null);
   const [words, setWord] = useState("water");
+  const [prepare, setPrepare] = useState(false);
+  let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${words}`;
+
+  function showDescription(response) {
+    setDescription(response.data[0]);
+  }
   function saveData(event) {
     event.preventDefault();
+    setPrepare(true);
+    axios.get(apiUrl).then(showDescription);
   }
   function saveInput(event) {
     setWord(event.target.value);
   }
+
   return (
     <div className="Dictionary">
       <div className="Dicionary-container">
@@ -55,7 +67,7 @@ export default function Dictionary() {
             <input type="submit" className="btn btn-info" />
           </form>
         </div>
-        <WordApi word={words} />
+        <WordApi word={words} data={description} ready={prepare} />
       </div>
     </div>
   );
