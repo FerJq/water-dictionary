@@ -1,29 +1,22 @@
 import React from "react";
-import "./WordApi.css";
-import Use from "./Use";
+import Definitions from "./Definitions";
 
 export default function WordApi(props) {
-  console.log(props.data);
-  if (props.data) {
+  if (props.result) {
     return (
       <div className="WordApi">
-        <div className="Container">
-          <h2>{props.data.word}</h2>
-          <p>
-            {props.data.meanings.map(function (elements, index) {
-              return (
-                <div>
-                  <div key={index}>
-                    <Use elements={elements} />
-                  </div>
-                </div>
-              );
-            })}
-          </p>
-        </div>
+        <h2>{props.result.word}</h2>
+        <h3>{props.result.phonetic}</h3>
+        {props.result.meanings.map(function (data, index) {
+          return (
+            <div key={index}>
+              <Definitions meaning={data} />
+            </div>
+          );
+        })}
       </div>
     );
   } else {
-    return null;
+    return "loading";
   }
 }
