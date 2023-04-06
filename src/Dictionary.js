@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Dictionary";
 import axios from "axios";
 import WordApi from "./WordApi";
+import ExampleWords from "./ExampleWords";
 
 export default function Dictionary(props) {
   const [description, setDescription] = useState(null);
@@ -81,7 +82,9 @@ export default function Dictionary(props) {
           <div className="WordApi">
             <WordApi result={description} />
           </div>
-          <div className="ExampleWords"></div>
+          <div className="ExampleWords">
+            <ExampleWords />
+          </div>
         </div>
       </div>
     );
