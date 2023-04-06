@@ -1,6 +1,8 @@
 import React from "react";
 import Synonyms from "./Synonyms";
 import Example from "./Example";
+import "./Definitions.css";
+
 export default function Definitions(props) {
   return (
     <div className="Definitions">
