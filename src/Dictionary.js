@@ -9,8 +9,8 @@ export default function Dictionary(props) {
   const [prepare, setPrepare] = useState(false);
 
   function showDescription(response) {
-    console.log(response.data[0]);
-    setDescription(response.data[0]);
+    console.log(response.data);
+    setDescription(response.data);
   }
 
   function submitSearch(event) {
@@ -23,7 +23,7 @@ export default function Dictionary(props) {
   }
 
   function loadData() {
-    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
+    let apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${word}&key=24fd0ba27a25dt7o304a40659333f2df`;
     axios.get(apiUrl).then(showDescription);
   }
 
