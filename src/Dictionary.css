@@ -1,3 +1,31 @@
-.form-control {
-  width: 400px;
+.Dictionary {
+  background-image: linear-gradient(
+      rgba(250, 250, 250, 0.704),
+      rgba(255, 249, 249, 0.976)
+    ),
+    url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/075/611/original/pexels-pixabay-278881.jpg?1680837222");
+
+  box-shadow: 5px 8px 11px grey;
+}
+
+.WordsContainer {
+  padding: 3%;
+}
+
+footer {
+  background-color: aliceblue;
+  padding: 1%;
+  text-align: center;
+  font-weight: 600;
+}
+
+footer a {
+  color: palevioletred;
+  text-decoration: none;
+  transition: all 200ms ease-in-out;
+}
+
+footer a:hover {
+  color: rgb(211, 16, 81);
+  transition: all 200ms ease-in-out;
 }

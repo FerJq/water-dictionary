@@ -1,0 +1,53 @@
+.MyLibrary {
+  color: rgb(0, 0, 0);
+  padding: 2%;
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  background-image: linear-gradient(
+      rgba(250, 250, 250, 0.846),
+      rgba(255, 249, 249, 0.5)
+    ),
+    url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/075/474/original/booksworld.png?1680752034");
+}
+
+#dark .MyLibrary {
+  color: rgb(255, 255, 255);
+  padding: 2%;
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  background-image: linear-gradient(
+      rgba(28, 28, 28, 0.9),
+      rgba(53, 53, 53, 0.5)
+    ),
+    url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/075/474/original/booksworld.png?1680752034");
+}
+
+.Hrefwebsite {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+img {
+  max-width: 300px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px rgb(108, 108, 108);
+}
+
+#dark img {
+  box-shadow: 5px 5px 5px rgb(0, 0, 0);
+}
+
+@media (max-width: 780px) {
+  .Hrefwebsite {
+    grid-template-columns: 1fr;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  img {
+    padding: 1%;
+    margin: 20px auto;
+  }
+}

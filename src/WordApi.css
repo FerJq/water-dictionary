@@ -1,0 +1,15 @@
+.Mainword {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: white;
+  padding: 4%;
+
+  border-radius: 10px;
+}
+
+.Meanings {
+  margin: 10px auto;
+  background-color: rgb(255, 255, 255);
+  padding: 4%;
+
+  border-radius: 10px;
+}

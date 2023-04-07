@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import "./Dictionary";
+import "./Dictionary.css";
 import axios from "axios";
 import WordApi from "./WordApi";
 import ExampleWords from "./ExampleWords";
+import Hrefwebsite from "./Hrefwebsite";
 
 export default function Dictionary(props) {
   const [description, setDescription] = useState(null);
@@ -10,7 +11,6 @@ export default function Dictionary(props) {
   const [prepare, setPrepare] = useState(false);
 
   function showDescription(response) {
-    console.log(response.data);
     setDescription(response.data);
   }
 
@@ -24,6 +24,7 @@ export default function Dictionary(props) {
   }
 
   function loadData() {
+    //https://www.shecodes.io/learn/apis/dictionary
     let apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${word}&key=24fd0ba27a25dt7o304a40659333f2df`;
     axios.get(apiUrl).then(showDescription);
   }
@@ -40,10 +41,10 @@ export default function Dictionary(props) {
           <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
               <a className="navbar-brand" href="/">
-                Navbar
+                Fjs.
               </a>
               <button
-                class="navbar-toggler"
+                className="navbar-toggler"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#navbarNavAltMarkup"
@@ -51,18 +52,25 @@ export default function Dictionary(props) {
                 aria-expanded="false"
                 aria-label="Toggle navigation"
               >
-                <span class="navbar-toggler-icon"></span>
+                <span className="navbar-toggler-icon"></span>
+            
               </button>
-              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                  <a class="nav-link active" aria-current="page" href="/">
+              <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div className="navbar-nav">
+                  <a className="nav-link active" aria-current="page" href="/">
                     Home
                   </a>
-                  <a class="nav-link" href="/">
-                    Features
+                  <a
+                    className="nav-link"
+                    href="https://github.com/FerJq/water-dictionary"
+                  >
+                    Source Code
                   </a>
-                  <a class="nav-link" href="/">
-                    Pricing
+                  <a
+                    className="nav-link"
+                    href="https://sage-blini-d7544b.netlify.app"
+                  >
+                    World of books
                   </a>
                 </div>
               </div>
@@ -71,21 +79,37 @@ export default function Dictionary(props) {
           <div className="forms">
             <form onSubmit={submitSearch}>
               <input
-                width="400"
                 type="Search"
-                className="form-control"
+                className="form-control p-2 rounded-0"
                 onChange={saveInput}
+                placeholder="Look for you word here!"
               />
-              <input type="submit" className="btn btn-info" />
             </form>
           </div>
-          <div className="WordApi">
-            <WordApi result={description} />
+          <div className="WordsContainer">
+            <div className="WordApi">
+              <WordApi result={description} />
+            </div>
+
+            <div className="ExampleWords">
+              <ExampleWords />
+            </div>
           </div>
-          <div className="ExampleWords">
-            <ExampleWords />
-          </div>
+
+          <Hrefwebsite />
         </div>
+        <footer>
+          <div>
+            Dictionary coded with love by{" "}
+            <a
+              rel="noreferrer"
+              href="https://www.linkedin.com/in/fernanda-santiago-b93b07265/"
+              target="_blank"
+            >
+              Fernanda Santiago
+            </a>
+          </div>
+        </footer>
       </div>
     );
   } else {
