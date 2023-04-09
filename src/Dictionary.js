@@ -92,7 +92,9 @@ export default function Dictionary(props) {
                   </a>
                 </div>
                 <div className="SwitcherMode">
-                  {props.mode === "light" ? "Light Mode" : "Dark Mode"}{" "}
+                  <span className="Modetheme">
+                    {props.mode === "light" ? "Light Mode" : "Dark Mode"}
+                  </span>{" "}
                   <Switch
                     onChange={props.changetheme}
                     checked={props.mode === "dark"}
