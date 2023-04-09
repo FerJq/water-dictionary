@@ -1,3 +1,13 @@
+.Pictures-Container {
+  padding: 5px 10px;
+  margin-top: 20px;
+  border-radius: 10px;
+  background: linear-gradient(
+    -20deg,
+    rgb(233, 222, 250) 0%,
+    rgb(251, 252, 219) 100%
+  );
+}
 .Pictures {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -16,15 +26,19 @@
 /*Darkmode*/
 
 #dark .Pictures {
-  background: linear-gradient(
-    76.8deg,
-    rgb(121, 45, 129) 3.6%,
-    rgb(36, 31, 98) 90.4%
-  );
+  background: rgb(31, 31, 31);
 }
 
 #dark .Pictures img {
   box-shadow: 3px 5px 10px rgb(61, 61, 61);
+}
+
+#dark .Pictures-Container {
+  background: linear-gradient(
+    248.6deg,
+    rgb(254, 99, 132) 0%,
+    rgb(49, 52, 56) 99.8%
+  );
 }
 @media (max-width: 760px) {
   .Pictures {

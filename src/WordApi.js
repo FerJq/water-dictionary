@@ -3,6 +3,7 @@ import Definitions from "./Definitions";
 import Pictures from "./Pictures";
 import { ColorRing } from "react-loader-spinner";
 import "./WordApi.css";
+import ExampleWords from "./ExampleWords";
 
 export default function WordApi(props) {
   if (props.result) {
@@ -29,6 +30,9 @@ export default function WordApi(props) {
               );
             })}
           </div>
+          <div className="ExampleWords">
+            <ExampleWords />
+          </div>
         </div>
       </div>
     );
@@ -40,8 +44,8 @@ export default function WordApi(props) {
       arraynumber = 0;
     }
     let colorArray = [
-      ["#e15b64", "#f47e60", "#f8b26a", "#abbd81", "#849b87"],
-      ["#d66d6d", "#aa73bc", "#cc5bb7", "#00d1ca", "#9400ff"],
+      ["#feceff", "#fffad6", "#ffcece", "#abbd81", "#849b87"],
+      ["#ffa35e", "#ff2882", "#f78a8a", "#8a5599", "#ba0b54"],
     ];
     return (
       <div className="Loader">

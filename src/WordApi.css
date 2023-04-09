@@ -8,7 +8,11 @@
   padding: 5px;
   margin-top: 20px;
   border-radius: 10px;
-  background-color: #fff0f6;
+  background: linear-gradient(
+    -20deg,
+    rgb(233, 222, 250) 0%,
+    rgb(251, 252, 219) 100%
+  );
 }
 
 h2 {
@@ -31,7 +35,11 @@ h6 {
   padding: 5px 10px;
   margin-top: 20px;
   border-radius: 10px;
-  background-color: #fff0f6;
+  background: linear-gradient(
+    -20deg,
+    rgb(233, 222, 250) 0%,
+    rgb(251, 252, 219) 100%
+  );
 }
 
 .Loader {
@@ -50,9 +58,9 @@ h6 {
 }
 #dark .Meanings-container {
   background: linear-gradient(
-    76.8deg,
-    rgb(121, 45, 129) 3.6%,
-    rgb(36, 31, 98) 90.4%
+    248.6deg,
+    rgb(254, 99, 132) 0%,
+    rgb(49, 52, 56) 99.8%
   );
 }
 
@@ -67,9 +75,9 @@ h6 {
 
 #dark .MainWord-Container {
   background: linear-gradient(
-    76.8deg,
-    rgb(121, 45, 129) 3.6%,
-    rgb(36, 31, 98) 90.4%
+    248.6deg,
+    rgb(254, 99, 132) 0%,
+    rgb(49, 52, 56) 99.8%
   );
 }
 

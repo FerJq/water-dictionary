@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import Switch from "react-switch";
 import axios from "axios";
 import WordApi from "./WordApi";
-import ExampleWords from "./ExampleWords";
 import Hrefwebsite from "./Hrefwebsite";
-import { ColorRing } from "react-loader-spinner";
 import "./Dictionary.css";
 
 export default function Dictionary(props) {
@@ -47,7 +45,7 @@ export default function Dictionary(props) {
     loadData();
   }
 
-  if (prepare === true) {
+  if (prepare) {
     return (
       <div className="Dictionary">
         <div className="Dicionary-container">
@@ -77,12 +75,16 @@ export default function Dictionary(props) {
                     Home
                   </a>
                   <a
+                    rel="noreferrer"
+                    target="_blank"
                     className="nav-link"
                     href="https://github.com/FerJq/water-dictionary"
                   >
                     Source Code
                   </a>
                   <a
+                    rel="noreferrer"
+                    target="_blank"
                     className="nav-link"
                     href="https://sage-blini-d7544b.netlify.app"
                   >
@@ -118,11 +120,7 @@ export default function Dictionary(props) {
               />
             </div>
             <br />
-            <div className="ExampleWords">
-              <ExampleWords word={word} />
-            </div>
           </div>
-
           <Hrefwebsite />
         </div>
         <footer>
@@ -143,15 +141,7 @@ export default function Dictionary(props) {
     dataReady();
     return (
       <div className="Loader">
-        <ColorRing
-          visible={true}
-          height="180"
-          width="80"
-          ariaLabel="blocks-loading"
-          wrapperStyle={{}}
-          wrapperClass="blocks-wrapper"
-          colors={["#e15b64", "#f47e60", "#f8b26a", "#abbd81", "#849b87"]}
-        />
+        <h2 className="text-grey">Loading...</h2>
       </div>
     );
   }
