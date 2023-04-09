@@ -11,7 +11,23 @@
 .WordsContainer {
   padding: 3%;
 }
+.Loader {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+.SwitcherMode {
+  margin: 10px;
+  font-weight: 600;
+}
 
+nav {
+  color: rgb(100, 100, 100);
+}
+
+#dark nav {
+  color: white;
+}
 footer {
   background-color: aliceblue;
   padding: 1%;

@@ -1,0 +1,23 @@
+a {
+  font-size: 20px;
+  margin: 0 auto;
+  text-decoration: none;
+  color: rgb(132, 132, 1);
+  font-weight: 600;
+  text-align: center;
+  transition: all 200ms ease-in-out;
+}
+
+a:hover {
+  transition: all 200ms ease-in;
+  text-decoration: underline;
+  color: red;
+}
+
+#dark a {
+  color: rgb(255, 0, 255);
+}
+
+#dark a:hover {
+  color: rgb(0, 145, 255);
+}

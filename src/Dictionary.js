@@ -4,15 +4,21 @@ import axios from "axios";
 import WordApi from "./WordApi";
 import ExampleWords from "./ExampleWords";
 import Hrefwebsite from "./Hrefwebsite";
+import { ColorRing } from "react-loader-spinner";
 import "./Dictionary.css";
 
 export default function Dictionary(props) {
   const [description, setDescription] = useState(null);
   const [word, setWord] = useState("bread");
   const [prepare, setPrepare] = useState(false);
+  const [pictures, setPictures] = useState(null);
 
   function showDescription(response) {
     setDescription(response.data);
+  }
+
+  function showPictures(response) {
+    setPictures(response.data.photos);
   }
 
   function submitSearch(event) {
@@ -28,6 +34,12 @@ export default function Dictionary(props) {
     //https://www.shecodes.io/learn/apis/dictionary
     let apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${word}&key=24fd0ba27a25dt7o304a40659333f2df`;
     axios.get(apiUrl).then(showDescription);
+
+    //Pexels reference https://www.pexels.com/api/
+    let pexelsKey = `5ju0a6eY9sQR9m89BeyCSfREaQ324Fk6tD4C2e7AzvbDdRFlOZSHiNP4`;
+    let pexelsUrl = `https://api.pexels.com/v1/search?query=${word}&per_page=6`;
+    let headers = { Authorization: pexelsKey };
+    axios.get(pexelsUrl, { headers: headers }).then(showPictures);
   }
 
   function dataReady() {
@@ -77,12 +89,13 @@ export default function Dictionary(props) {
                     World of books
                   </a>
                 </div>
-                <span>
+                <div className="SwitcherMode">
+                  {props.mode === "light" ? "Light Mode" : "Dark Mode"}{" "}
                   <Switch
                     onChange={props.changetheme}
                     checked={props.mode === "dark"}
                   />
-                </span>
+                </div>
               </div>
             </div>
           </nav>
@@ -98,11 +111,15 @@ export default function Dictionary(props) {
           </div>
           <div className="WordsContainer">
             <div className="WordApi">
-              <WordApi result={description} />
+              <WordApi
+                result={description}
+                pictures={pictures}
+                mode={props.mode}
+              />
             </div>
 
             <div className="ExampleWords">
-              <ExampleWords />
+              <ExampleWords word={word} />
             </div>
           </div>
 
@@ -124,6 +141,18 @@ export default function Dictionary(props) {
     );
   } else {
     dataReady();
-    return "Loading";
+    return (
+      <div className="Loader">
+        <ColorRing
+          visible={true}
+          height="180"
+          width="80"
+          ariaLabel="blocks-loading"
+          wrapperStyle={{}}
+          wrapperClass="blocks-wrapper"
+          colors={["#e15b64", "#f47e60", "#f8b26a", "#abbd81", "#849b87"]}
+        />
+      </div>
+    );
   }
 }

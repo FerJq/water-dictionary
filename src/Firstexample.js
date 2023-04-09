@@ -24,9 +24,18 @@ export default function Secondexample(props) {
   if (data) {
     return (
       <div className="FirstExample">
-        <h3>{data.word}</h3>
-        <h6>{data.phonetic}</h6>
-        <p>{data.meanings[0].definition}</p>
+        <div>
+          <h3>{data.word}</h3>
+          <h6>{data.phonetic}</h6>
+          <p>{data.meanings[0].definition}</p>
+        </div>
+        <a
+          href={`https://www.merriam-webster.com/dictionary/${data.word}`}
+          rel="noreferrer"
+          target="_blank"
+        >
+          👉 Learn more
+        </a>
       </div>
     );
   } else {
