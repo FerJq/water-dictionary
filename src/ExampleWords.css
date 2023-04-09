@@ -17,3 +17,22 @@
   padding: 1%;
   text-align: center;
 }
+/*Dark mode*/
+#dark .Example {
+  border-radius: 10px;
+  background: linear-gradient(
+    76.8deg,
+    rgb(121, 45, 129) 3.6%,
+    rgb(36, 31, 98) 90.4%
+  );
+  color: white;
+}
+
+@media (max-width: 760px) {
+  .AutomaticWords {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0px auto;
+    padding: 1%;
+  }
+}

@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import "./Dictionary.css";
+import Switch from "react-switch";
 import axios from "axios";
 import WordApi from "./WordApi";
 import ExampleWords from "./ExampleWords";
 import Hrefwebsite from "./Hrefwebsite";
+import "./Dictionary.css";
 
 export default function Dictionary(props) {
   const [description, setDescription] = useState(null);
@@ -38,11 +39,15 @@ export default function Dictionary(props) {
     return (
       <div className="Dictionary">
         <div className="Dicionary-container">
-          <nav className="navbar navbar-expand-lg bg-body-tertiary">
+          <nav
+            className="navbar navbar-expand-lg bg-body-tertiary"
+            data-bs-theme={props.mode}
+          >
             <div className="container-fluid">
               <a className="navbar-brand" href="/">
                 Fjs.
               </a>
+
               <button
                 className="navbar-toggler"
                 type="button"
@@ -53,7 +58,6 @@ export default function Dictionary(props) {
                 aria-label="Toggle navigation"
               >
                 <span className="navbar-toggler-icon"></span>
-            
               </button>
               <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div className="navbar-nav">
@@ -73,6 +77,12 @@ export default function Dictionary(props) {
                     World of books
                   </a>
                 </div>
+                <span>
+                  <Switch
+                    onChange={props.changetheme}
+                    checked={props.mode === "dark"}
+                  />
+                </span>
               </div>
             </div>
           </nav>

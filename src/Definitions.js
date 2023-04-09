@@ -6,7 +6,6 @@ import "./Definitions.css";
 export default function Definitions(props) {
   return (
     <div className="Definitions">
-      <br />
       <h4>{props.meaning.partOfSpeech}</h4>
       <p>{props.meaning.definition}</p>
 

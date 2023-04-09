@@ -1,13 +1,21 @@
-body {
-  background: radial-gradient(
-    329px at 3.1% 9.3%,
-    rgb(251, 204, 235) 28.1%,
-    rgba(221, 221, 221, 0.15) 100.7%
+#dark {
+  background: linear-gradient(
+    180.2deg,
+    rgb(120, 85, 137) -6.9%,
+    rgb(35, 9, 31) 76.7%
+  );
+}
+
+#light {
+  background: linear-gradient(
+    -20deg,
+    rgb(233, 222, 250) 0%,
+    rgb(251, 252, 219) 100%
   );
 }
 
 .App-header {
-  margin: 50px auto;
+  margin: 0 auto;
   max-width: 1000px;
   display: block;
   padding: 2%;
@@ -16,4 +24,14 @@ body {
 
 .App-link {
   color: #61dafb;
+}
+
+@media (max-width: 760px) {
+  .App-header {
+    padding: 1%;
+  }
+
+  .App {
+    padding: 6%;
+  }
 }

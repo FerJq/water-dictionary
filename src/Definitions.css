@@ -1,0 +1,22 @@
+.Definitions h4 {
+  font-size: 35px;
+}
+
+.Definitions p {
+  font-size: 25px;
+  font-weight: 300;
+}
+
+hr {
+  color: purple;
+}
+
+@media (max-width: 760px) {
+  .Definitions h4 {
+    font-size: 20px;
+  }
+
+  .Definitions p {
+    font-size: 15px;
+  }
+}
