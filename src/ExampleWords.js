@@ -112,6 +112,7 @@ export default function ExampleWords() {
       <hr />
       <div className="AutomaticWords">
         <Firstexample variant={words} />
+
         <Secondexample variant={words} />
       </div>
     </div>

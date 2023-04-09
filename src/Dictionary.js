@@ -9,7 +9,7 @@ import "./Dictionary.css";
 
 export default function Dictionary(props) {
   const [description, setDescription] = useState(null);
-  const [word, setWord] = useState("bread");
+  const [word, setWord] = useState("yogurt");
   const [prepare, setPrepare] = useState(false);
   const [pictures, setPictures] = useState(null);
 
@@ -117,7 +117,7 @@ export default function Dictionary(props) {
                 mode={props.mode}
               />
             </div>
-
+            <br />
             <div className="ExampleWords">
               <ExampleWords word={word} />
             </div>

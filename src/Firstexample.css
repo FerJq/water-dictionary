@@ -1,4 +1,10 @@
-a {
+.FirstExample {
+  background-color: #fff0f6;
+  padding: 2%;
+  border-radius: 10px;
+}
+
+.FirstExample a {
   font-size: 20px;
   margin: 0 auto;
   text-decoration: none;
@@ -8,16 +14,20 @@ a {
   transition: all 200ms ease-in-out;
 }
 
-a:hover {
+.FirstExample a:hover {
   transition: all 200ms ease-in;
   text-decoration: underline;
   color: red;
 }
 
-#dark a {
+#dark .FirstExample a {
   color: rgb(255, 0, 255);
 }
 
-#dark a:hover {
+#dark .FirstExample a:hover {
   color: rgb(0, 145, 255);
+}
+
+#dark .FirstExample {
+  background-color: rgb(43, 43, 43);
 }

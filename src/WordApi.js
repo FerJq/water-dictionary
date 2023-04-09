@@ -8,22 +8,27 @@ export default function WordApi(props) {
   if (props.result) {
     return (
       <div className="WordApi">
-        <div className="Mainword">
-          <hr />
-          <h2>{props.result.word}</h2>
-          <h6>{props.result.phonetic}</h6>
-          <hr />
+        <div className="MainWord-Container">
+          <div className="Mainword">
+            <h2>{props.result.word}</h2>
+            <hr />
+            <h6>{props.result.phonetic}</h6>
+          </div>
         </div>
         <br />
         <Pictures pictures={props.pictures} />
-        <div className="Meanings">
-          {props.result.meanings.map(function (data, index) {
-            return (
-              <div key={index}>
-                <Definitions meaning={data} />
-              </div>
-            );
-          })}
+        <div className="Meanings-container">
+          <div className="Meanings">
+            {props.result.meanings.map(function (data, index) {
+              return (
+                <div key={index}>
+                  <hr />
+                  <Definitions meaning={data} />
+                  <hr />
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     );
