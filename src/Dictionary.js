@@ -7,7 +7,7 @@ import "./Dictionary.css";
 
 export default function Dictionary(props) {
   const [description, setDescription] = useState(null);
-  const [word, setWord] = useState("pink");
+  const [word, setWord] = useState("strawberry");
   const [prepare, setPrepare] = useState(false);
   const [pictures, setPictures] = useState(null);
   let day_mode = <i className="fa-regular fa-sun"></i>;
