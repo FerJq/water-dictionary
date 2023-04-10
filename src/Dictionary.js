@@ -83,7 +83,7 @@ export default function Dictionary(props) {
                     className="nav-link"
                     href="https://github.com/FerJq/water-dictionary"
                   >
-                    Source Code
+                    Open source code
                   </a>
                   <a
                     rel="noreferrer"
