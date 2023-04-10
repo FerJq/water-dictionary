@@ -10,11 +10,12 @@ export default function Dictionary(props) {
   const [word, setWord] = useState("pink");
   const [prepare, setPrepare] = useState(false);
   const [pictures, setPictures] = useState(null);
-  let day_mode = <i class="fa-regular fa-sun"></i>;
-  let night_mode = <i class="fa-solid fa-moon"></i>;
+  let day_mode = <i className="fa-regular fa-sun"></i>;
+  let night_mode = <i className="fa-solid fa-moon"></i>;
 
   function showDescription(response) {
     setDescription(response.data);
+    console.log(response.data);
   }
 
   function showPictures(response) {
@@ -57,7 +58,7 @@ export default function Dictionary(props) {
           >
             <div className="container-fluid">
               <a className="navbar-brand" href="/">
-                Fjs.
+                FjS.
               </a>
 
               <button
