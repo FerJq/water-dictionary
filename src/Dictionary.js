@@ -60,7 +60,6 @@ export default function Dictionary(props) {
               <a className="navbar-brand" href="/">
                 FjS.
               </a>
-
               <button
                 className="navbar-toggler"
                 type="button"
@@ -94,16 +93,16 @@ export default function Dictionary(props) {
                     World of books
                   </a>
                 </div>
-                <div className="SwitcherMode">
-                  <span className="Modetheme">
-                    {props.mode === "light" ? day_mode : night_mode}
-                  </span>{" "}
-                  <Switch
-                    onChange={props.changetheme}
-                    checked={props.mode === "dark"}
-                  />
-                </div>
               </div>
+              <span className="SwitcherMode">
+                <span className="Modetheme">
+                  {props.mode === "light" ? day_mode : night_mode}
+                </span>{" "}
+                <Switch
+                  onChange={props.changetheme}
+                  checked={props.mode === "dark"}
+                />
+              </span>
             </div>
           </nav>
           <div className="forms">
