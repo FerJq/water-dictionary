@@ -119,7 +119,7 @@ export default function Dictionary(props) {
             <label>
               example: rain, book, color, moon, sky, lens, rice, pencil, dog,
               grass, cloud, people, first, it, would, write, computer, coding,
-              game, could, way, car, object
+              game, could, way, car, object, animal, plant, sun, scorpion.
             </label>
           </div>
           <div className="WordsContainer">
