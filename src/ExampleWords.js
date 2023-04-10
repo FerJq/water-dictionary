@@ -108,7 +108,7 @@ export default function ExampleWords() {
   ];
   return (
     <div className="Example">
-      <h1>Example Words!</h1>
+      <h1>Vocabulary!</h1>
       <hr />
       <div className="AutomaticWords">
         <Firstexample variant={words} />
