@@ -7,9 +7,11 @@ import "./Dictionary.css";
 
 export default function Dictionary(props) {
   const [description, setDescription] = useState(null);
-  const [word, setWord] = useState("yogurt");
+  const [word, setWord] = useState("pink");
   const [prepare, setPrepare] = useState(false);
   const [pictures, setPictures] = useState(null);
+  let day_mode = <i class="fa-regular fa-sun"></i>;
+  let night_mode = <i class="fa-solid fa-moon"></i>;
 
   function showDescription(response) {
     setDescription(response.data);
@@ -93,7 +95,7 @@ export default function Dictionary(props) {
                 </div>
                 <div className="SwitcherMode">
                   <span className="Modetheme">
-                    {props.mode === "light" ? "Light Mode" : "Dark Mode"}
+                    {props.mode === "light" ? day_mode : night_mode}
                   </span>{" "}
                   <Switch
                     onChange={props.changetheme}
