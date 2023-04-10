@@ -115,6 +115,13 @@ export default function Dictionary(props) {
               />
             </form>
           </div>
+          <div className="Example">
+            <label>
+              example: rain, book, color, moon, sky, lens, rice, pencil, dog,
+              grass, cloud, people, first, it, would, write, computer, coding,
+              game, could, way, car, object
+            </label>
+          </div>
           <div className="WordsContainer">
             <div className="WordApi">
               <WordApi

@@ -8,6 +8,20 @@
   box-shadow: 5px 8px 11px grey;
 }
 
+.Dictionary .Example {
+  text-align: center;
+  background-color: white;
+  padding: 5px;
+}
+
+.Dictionary .Example label {
+  color: grey;
+  font-size: 14px;
+  border-radius: 20px;
+  padding: 5px;
+  background-color: white;
+}
+
 .WordsContainer {
   padding: 3%;
 }
@@ -62,6 +76,17 @@ footer a:hover {
     url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/075/611/original/pexels-pixabay-278881.jpg?1680837222");
 
   box-shadow: 5px 8px 11px rgb(19, 19, 19);
+}
+
+#dark .Dictionary .Example {
+  text-align: center;
+  background-color: white;
+  padding: 5px;
+}
+
+#dark .Dictionary .Example label {
+  background-color: rgb(37, 46, 53);
+  color: rgb(184, 184, 184);
 }
 
 #dark .Modetheme {
