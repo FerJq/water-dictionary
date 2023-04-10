@@ -119,7 +119,7 @@ export default function Dictionary(props) {
             <main>
               i.e: rain, book, color, moon, sky, lens, rice, pencil, dog, grass,
               cloud, people, first, it, would, write, computer, coding, game,
-              could, way, car, object, animal, plant, sun, scorpion.
+              could, way, car, object, animal, plant, sun, scorpion, etc...
             </main>
           </div>
           <div className="WordsContainer">
