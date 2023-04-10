@@ -8,18 +8,17 @@
   box-shadow: 5px 8px 11px grey;
 }
 
-.Dictionary .Example {
+.Dictionary .examplewordsform {
   text-align: center;
   background-color: white;
   padding: 5px;
 }
 
-.Dictionary .Example label {
+.Dictionary .examplewordsform main {
   color: grey;
   font-size: 14px;
   border-radius: 20px;
   padding: 5px;
-  background-color: white;
 }
 
 .WordsContainer {
@@ -78,14 +77,13 @@ footer a:hover {
   box-shadow: 5px 8px 11px rgb(19, 19, 19);
 }
 
-#dark .Dictionary .Example {
+#dark .Dictionary .examplewordsform {
+  background-color: rgb(37, 46, 53);
   text-align: center;
-  background-color: white;
   padding: 5px;
 }
 
-#dark .Dictionary .Example label {
-  background-color: rgb(37, 46, 53);
+#dark .Dictionary .examplewordsform main {
   color: rgb(184, 184, 184);
 }
 
