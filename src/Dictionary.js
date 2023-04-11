@@ -15,7 +15,6 @@ export default function Dictionary(props) {
 
   function showDescription(response) {
     setDescription(response.data);
-    console.log(response.data);
   }
 
   function showPictures(response) {
